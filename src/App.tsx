@@ -2,9 +2,12 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { Typography as MuiTypography } from '@mui/material'
+import { Chip as MuiChip } from '@mui/material';
 
 import { HelloWorld } from 'test-package';
-import { Chip, Loader } from 'test-package';
+import { Loader } from 'test-package';
+import { Chip } from 'test-package';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,9 +15,15 @@ function App() {
   return (
     <>
       <div>
+        <h2>MUI Components</h2>
+        <MuiTypography variant='h1'>Test</MuiTypography>
+        <MuiChip label="Test Chip from Material UI" />
+        <br /><br />
+        <h2>WDS-REACT COMPONENTS</h2>
         <HelloWorld />
         <Loader />
-        <Chip />
+        <Chip label="Test Chip from wds-react" />
+        <br /><br />
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
